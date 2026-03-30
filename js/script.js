@@ -91,3 +91,16 @@
     });
 });
 
+// 페이지 로드 시 자동으로 패널 오픈
+window.addEventListener('load', () => {
+    // 약간의 딜레이 후 시작 (페이지 렌더링 완료 후)
+    setTimeout(() => {
+        panelLeft.style.transition = 'transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        panelRight.style.transition = 'transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        
+        totalOffset = MAX_OFFSET;
+        currentOffset = MAX_OFFSET;
+        applyOffset(MAX_OFFSET);
+        hint.classList.add('hidden');
+    }, 500); // 0.5초 후 시작
+});
