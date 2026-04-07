@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'GangwonEduAll', sans-serif;
+  word-break: keep-all;
+  /*단어단위로 줄바꿈해라*/
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
