@@ -526,6 +526,8 @@ body {
   justify-content: flex-end;
 }
 
+
+
 .img-laptop {
   width: 50%;
 }
@@ -533,6 +535,7 @@ body {
 .img-tablet {
   width: 23%;
 }
+
 
 .img-mobile {
   width: 12%;
@@ -551,9 +554,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* .link-btn.link-break {
-    flex-basis: 30%;
-} */
 
 .link-btn {
   padding: 10px 20px;
@@ -583,23 +583,6 @@ body {
   border-color: #2a3a6a;
 }
 
-/* proj-5 전용 이미지 스타일 */
-#proj-5 .project-imgs {
-  justify-content: center;
-  align-items: center;
-}
-
-#proj-5 .project-left {
-  flex: 2;
-}
-
-#proj-5 .img-laptop {
-  width: auto;
-  max-width: 380px;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 8px;
-}
 
 /*-------content영역--------*/
 #contact {
@@ -669,3 +652,8 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+
+
