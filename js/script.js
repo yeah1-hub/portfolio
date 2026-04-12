@@ -93,7 +93,7 @@
 
 // 페이지 로드 시 자동으로 패널 오픈
 window.addEventListener('load', () => {
-    // 약간의 딜레이 후 시작 (페이지 렌더링 완료 후)
+    
     setTimeout(() => {
         panelLeft.style.transition = 'transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         panelRight.style.transition = 'transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
@@ -102,5 +102,33 @@ window.addEventListener('load', () => {
         currentOffset = MAX_OFFSET;
         applyOffset(MAX_OFFSET);
         hint.classList.add('hidden');
-    }, 500); // 0.5초 후 시작
+    }, 500); 
+});
+
+// Design 모달
+const designItems = document.querySelectorAll('.design-item');
+const designModal = document.getElementById('designModal');
+const modalImg = document.getElementById('modalImg');
+const modalClose = document.getElementById('modalClose');
+const modalOverlay = document.getElementById('modalOverlay');
+
+designItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const src = item.dataset.img;
+        modalImg.src = src;
+        designModal.classList.add('active');
+        modalOverlay.classList.add('active');
+    });
+});
+
+function closeModal() {
+    designModal.classList.remove('active');
+    modalOverlay.classList.remove('active');
+}
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
 });
