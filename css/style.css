@@ -184,52 +184,8 @@ body {
   object-position: left center;
 }
 
-/* 힌트 */
-.hint {
-  position: absolute;
-  bottom: 15vh;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-.hint.hidden {
-  opacity: 0;
-}
-
-.hint-arrow {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.hint-arrow span {
-  font-family: "Noto Serif KR", serif;
-  font-size: 1.3rem;
-  color: #040404;
-  animation: pulse-arrow 1.8s ease-in-out infinite;
-}
-
-.hint-arrow span:first-child {
-  animation-delay: 0s;
-}
-
-.hint-arrow span:last-child {
-  animation-delay: 0.3s;
-  transform: scaleX(-1);
-}
-
-.hint p {
-  font-size: 1.1rem;
-  color: #5b5b5b;
-  letter-spacing: 0.13em;
+.highlight {
+  background: linear-gradient(transparent 60%, #ffe066 60%);
 }
 
 /* 스킬 */
@@ -598,9 +554,15 @@ body {
     gap: 3rem;
 }
 
+#design h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 60px;
+}
 .design-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
