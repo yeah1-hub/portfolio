@@ -3,7 +3,6 @@
         const panelLeft = document.getElementById('panelLeft');
         const panelRight = document.getElementById('panelRight');
         const behindText = document.getElementById('behindText');
-        const hint = document.getElementById('hint');
         const skills = document.getElementById('skills'); 
 
         let isDragging = false;
